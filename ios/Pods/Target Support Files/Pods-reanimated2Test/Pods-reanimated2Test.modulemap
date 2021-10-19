@@ -1,0 +1,6 @@
+module Pods_reanimated2Test {
+  umbrella header "Pods-reanimated2Test-umbrella.h"
+
+  export *
+  module * { export * }
+}

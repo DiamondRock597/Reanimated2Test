@@ -1,4 +1,6 @@
 export enum Routes {
-    CommonAnimation = 'COMMON_ANIMATION',
-    Menu = 'MENU'
+    CommonAnimation = 'Common Animation',
+    Menu = 'Menu',
+    Worklets = 'Worklets',
+    PanGesture = 'Pan Gesture'
 }

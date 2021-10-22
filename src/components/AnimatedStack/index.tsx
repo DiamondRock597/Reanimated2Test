@@ -147,7 +147,7 @@ const styles = StyleSheet.create({
         position: 'absolute',
         top: 10,
         zIndex: 1,
-        elevation: 1
+        // elevation: 1
     },
     animatedCard: {
         width: '90%',

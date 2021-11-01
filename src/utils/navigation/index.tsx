@@ -7,6 +7,7 @@ import { Menu } from '../../screens/Menu';
 import { Routes } from './routes';
 import { Worklets } from '../../screens/Worklets';
 import { PanGesture } from '../../screens/PanGesture';
+import { Transitions } from '../../screens/Transitions';
 
 const Stack = createStackNavigator();
 
@@ -18,6 +19,7 @@ export const MainNavigator = () => {
                 <Stack.Screen component={CommonAnimation} name={Routes.CommonAnimation} />
                 <Stack.Screen component={Worklets} name={Routes.Worklets} />
                 <Stack.Screen component={PanGesture} name={Routes.PanGesture} />
+                <Stack.Screen component={Transitions} name={Routes.Transitions} />
             </Stack.Navigator>
         </NavigationContainer>
     )

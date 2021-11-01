@@ -1,18 +1,38 @@
 import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
+import Animated, { interpolate, useAnimatedStyle } from 'react-native-reanimated';
 
-export const CreditCard = () => {
+interface Props {
+    index: number;
+    transition: any;
+}
+
+export const CreditCard: React.FC<Props> = ({ index, transition }) => {
+    const rotate = interpolate(transition.value, [0, 1], [0, ((index - 1) * Math.PI) * 10]);
+
+    const style = useAnimatedStyle(() => ({
+
+        transform: [
+            { rotate: `${rotate}deg` },
+        ]
+    }));
+    
+
     return (
-        <View style={style.container} />
+        <Animated.View style={[styles.container,
+            style
+        ]} />
     )
 }
 
-const style = StyleSheet.create({
+const styles = StyleSheet.create({
     container: {
         backgroundColor: 'blue',
         width: 300,
         height: 200,
         borderRadius: 30,
-        opacity: 0.7
+        opacity: 0.7,
+        position: 'absolute',
+        top: 200
     }
 });

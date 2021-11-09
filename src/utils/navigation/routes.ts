@@ -3,5 +3,6 @@ export enum Routes {
     Menu = 'Menu',
     Worklets = 'Worklets',
     PanGesture = 'Pan Gesture',
-    Transitions = 'Transitions'
+    Transitions = 'Transitions',
+    HOCAnimation = 'HOCAnimation'
 }

@@ -8,12 +8,12 @@ interface Props {
 }
 
 export const CreditCard: React.FC<Props> = ({ index, transition }) => {
-    const rotate = interpolate(transition.value, [0, 1], [0, ((index - 1) * Math.PI) * 10]);
+    const rotate = (index - 1) * interpolate(transition.value, [0, 1], [0, Math.PI / 6]);
 
     const style = useAnimatedStyle(() => ({
 
         transform: [
-            { rotate: `${rotate}deg` },
+            { rotate: `${rotate}rad` },
         ]
     }));
     

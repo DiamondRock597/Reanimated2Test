@@ -22,7 +22,7 @@ export const Transitions = () => {
         isToggled.value = toggled;
     }, [toggled, isToggled]);
     
-    const transition = useDerivedValue(() => withTiming(isToggled.value));
+    const transition = useDerivedValue(() => isToggled.value);
 
     return (
         <View style={styles.container}>
